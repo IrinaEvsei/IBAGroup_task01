@@ -1,23 +1,32 @@
 public class Criteries {
-    private int id_criteria;
-    private String name_criteria;
+    private int idCriteria;
+    private String nameCriteria;
     private int priority;
 
-    Criteries(){}
-    public int getId_criteria() {
-        return id_criteria;
+    public Criteries(int idCriteria, String nameCriteria, int priority) {
+        this.idCriteria = idCriteria;
+        this.nameCriteria = nameCriteria;
+        this.priority = priority;
     }
 
-    public void setId_criteria(int id_criteria) {
-        this.id_criteria = id_criteria;
+    public Criteries() {
+
     }
 
-    public String getName_criteria() {
-        return name_criteria;
+    public int getIdCriteria() {
+        return idCriteria;
     }
 
-    public void setName_criteria(String name_criteria) {
-        this.name_criteria = name_criteria;
+    public void setIdCriteria(int idCriteria) {
+        this.idCriteria = idCriteria;
+    }
+
+    public String getNameCriteria() {
+        return nameCriteria;
+    }
+
+    public void setNameCriteria(String nameCriteria) {
+        this.nameCriteria = nameCriteria;
     }
 
     public int getPriority() {
@@ -35,11 +44,26 @@ public class Criteries {
 
         Criteries criteries = (Criteries) o;
 
-        return name_criteria != null ? name_criteria.equals(criteries.name_criteria) : criteries.name_criteria == null;
+        return nameCriteria != null ? nameCriteria.equals(criteries.nameCriteria) : criteries.nameCriteria == null;
     }
 
     @Override
     public int hashCode() {
-        return name_criteria != null ? name_criteria.hashCode() : 0;
+        return nameCriteria != null ? nameCriteria.hashCode() : 0;
+    }
+
+    public void addCriteries(int idCriteria, String nameCriteria, int priority){
+        setIdCriteria(idCriteria);
+        setNameCriteria(nameCriteria);
+        setPriority(priority);
+    }
+
+    @Override
+    public String toString() {
+        return "Criteries{" +
+                "idCriteria=" + idCriteria +
+                ", nameCriteria='" + nameCriteria + '\'' +
+                ", priority=" + priority +
+                '}';
     }
 }

@@ -3,17 +3,35 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Candidate {
-    private int id_candidate;
-    private String name_candidate;
-    private List<Criteries> criteries_candidate;
+    private int idCandidate;
+    private String nameCandidate;
+    private List<Criteries> criteriesCandidate;
     private float competence;
+
+    public Candidate(int idCandidate, String nameCandidate, List<Criteries> criteriesCandidate, float competence) {
+        this.idCandidate = idCandidate;
+        this.nameCandidate = nameCandidate;
+        this.criteriesCandidate = criteriesCandidate;
+        this.competence = competence;
+    }
+
+    @Override
+    public String toString() {
+        return "Candidate{" +
+                "idCandidate=" + idCandidate +
+                ", nameCandidate='" + nameCandidate + '\'' +
+                ", criteriesCandidate=" + criteriesCandidate +
+                ", competence=" + competence +
+                '}';
+    }
+
 
     public float getCompetence() {
         return competence;
     }
 
-    public void addToCompetence(float value){
-        competence += value;
+    public void addToCompetence(float value) {
+
     }
     public void procent(int n){
         competence = competence * 100 / n;
@@ -22,33 +40,33 @@ public class Candidate {
         this.competence = competence;
     }
 
-    public int getId_candidate() {
-        return id_candidate;
+    public int getIdCandidate() {
+        return idCandidate;
     }
 
-    public void setId_candidate(int id_candidate) {
-        this.id_candidate = id_candidate;
+    public void setIdCandidate(int idCandidate) {
+        this.idCandidate = idCandidate;
     }
 
-    public String getName_candidate() {
-        return name_candidate;
+    public String getNameCandidate() {
+        return nameCandidate;
     }
 
-    public void setName_candidate(String name_candidate) {
-        this.name_candidate = name_candidate;
+    public void setNameCandidate(String nameCandidate) {
+        this.nameCandidate = nameCandidate;
     }
 
-    public List<Criteries> getCriteries_candidate() {
-        return criteries_candidate;
+    public List<Criteries> getCriteriesCandidate() {
+        return criteriesCandidate;
     }
 
-    public void setCriteries_candidate(List<Criteries> criteries_candidate) {
-        this.criteries_candidate = criteries_candidate;
+    public void setCriteriesCandidate(List<Criteries> criteriesCandidate) {
+        this.criteriesCandidate = criteriesCandidate;
     }
 
     public void createProfile(){
         Scanner scanner = new Scanner(System.in);
-        criteries_candidate = new ArrayList<Criteries>();
+        criteriesCandidate = new ArrayList<Criteries>();
 
 
     }
